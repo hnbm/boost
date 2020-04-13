@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/articleItem"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_menu_article"
+        android:enabled="true"
+        android:checked="true"
+        android:title="@string/article" />
+    <item
+        android:id="@+id/economyItem"
+        android:icon="@drawable/ic_menu_economy"
+        android:title="@string/economy" />
+    <item
+        android:id="@+id/simulationItem"
+        android:icon="@drawable/ic_menu_simulation"
+        android:title="@string/simulation" />
+
+</menu>
