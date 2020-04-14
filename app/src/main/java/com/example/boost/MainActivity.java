@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private FragmentArticle fragmentArticle = new FragmentArticle();
     private FragmentEconomy fragmentEconomy = new FragmentEconomy();
     private FragmentSimulation fragmentSimulation = new FragmentSimulation();
+    OnBackPressedListener listener;
 
 
     @Override
@@ -53,6 +54,19 @@ public class MainActivity extends AppCompatActivity {
                 default:
                     return false;
             }
+        }
+    }
+
+    public void setOnBackPressedListener(OnBackPressedListener listener){
+        this.listener = listener;
+    }
+
+    @Override
+    public void onBackPressed() {
+        if(listener != null){
+            listener.onBackPressed();
+        }else{
+            super.onBackPressed();
         }
     }
 }
